@@ -112,3 +112,49 @@ pessoa.mostrarPeso = function() {
 
 console.log(pessoa.mostrarPeso());
 
+console.log("******************************************************")
+
+
+
+
+/*
+Agora vamos deixar a brincadeira um pouco mais divertida! :D
+Crie um método para o objeto `pessoa` chamado `apresentacao`. Esse método deve
+retornar a string:
+- "Olá, eu sou o [NOME COMPLETO], tenho [IDADE] anos, [ALTURA], meu peso é [PESO] e, só hoje, eu já caminhei [CAMINHOU QUANTOS METROS] metros!"
+
+Só que, antes de retornar a string, você vai fazer algumas validações:
+- Se o `sexo` de `pessoa` for "Feminino", a frase acima, no início da
+apresentação, onde diz "eu sou o", deve mostrar "a" no lugar do "o";
+- Se a idade for `1`, a frase acima, na parte que fala da idade, vai mostrar a
+palavra "ano" ao invés de "anos", pois é singular;
+- Se a quantidade de metros caminhados for igual a `1`, então a palavra que
+deve conter no retorno da frase acima é "metro" no lugar de "metros".
+- Para cada validação, você irá declarar uma variável localmente (dentro do
+método), que será concatenada com a frase de retorno, mostrando a resposta
+correta, de acordo com os dados inseridos no objeto.
+*/
+
+
+
+pessoa.apresentacao = function() {
+
+  let sexo = "o";
+  let idade = "anos";
+  let quantidadeMetrosCaminhada = "metros";
+
+  if(pessoa.sexo === "Feminino") {
+   sexo = "a";
+  }
+
+  if(pessoa.idade === 1) {
+    idade = "ano";
+  }
+
+  if(pessoa.caminhouQuantosMetros === 1) {
+    quantidadeMetrosCaminhada = "metro";
+  }
+
+  return `Olá, eu sou ${sexo} ${pessoa.nome} ${pessoa.sobreNome}, tenho ${pessoa.idade} ${idade}, ${pessoa.altura} altura, meu peso é ${pessoa.peso}kg e só hoje, eu já caminhei ${pessoa.caminhouQuantosMetros} ${quantidadeMetrosCaminhada}"!´`
+}
+

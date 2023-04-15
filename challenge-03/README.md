@@ -51,7 +51,7 @@ booleano que representa "verdadeiro";
 */
 
 pessoa.andar = (metros) => {
-    pessoa.caminhouQuantosMetros + metros;
+    pessoa.caminhouQuantosMetros += metros;
     pessoa.andando = true;
 }
 
@@ -145,30 +145,34 @@ pessoa.mostrarIdade() //Olá, eu tenho 35 anos!
 Agora, faça a `pessoa` caminhar alguns metros, invocando o método `andar` 3x,
 com metragens diferentes passadas por parâmetro.
 */
-?
+pessoa.andar(600);
+pessoa.andar(70);
+pessoa.andar(46);
+
 
 /*
 A pessoa ainda está andando? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-?
+pessoa.andando; // true;
 
 /*
 Se a pessoa ainda está andando, faça-a parar.
 */
-?
+pessoa.parar(); 
 
 /*
 E agora: a pessoa ainda está andando? (Use uma instrução para responder e
 comentários inline ao lado da instrução para mostrar a resposta retornada)
 */
-?
+
+pessoa.andando; //false
 
 /*
 Quantos metros a pessoa andou? (Use uma instrução para responder e comentários
 inline ao lado da instrução para mostrar a resposta retornada)
 */
-?
+pessoa.caminhouQuantosMetros; // 716
 
 /*
 Agora vamos deixar a brincadeira um pouco mais divertida! :D
@@ -187,8 +191,28 @@ deve conter no retorno da frase acima é "metro" no lugar de "metros".
 método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
-?
+
+pessoa.apresentacao = function() {
+
+  let sexo = "o";
+  let idade = "anos";
+  let quantidadeMetrosCaminhada = "metros";
+
+  if(pessoa.sexo === "Feminino") {
+   sexo = "a";
+  }
+
+  if(pessoa.idade === 1) {
+    idade = "ano";
+  }
+
+  if(pessoa.caminhouQuantosMetros === 1) {
+    quantidadeMetrosCaminhada = "metro";
+  }
+
+  return `Olá, eu sou ${sexo} ${pessoa.nome} ${pessoa.sobreNome}, tenho ${pessoa.idade} ${idade}, ${pessoa.altura} altura, meu peso é ${pessoa.peso}kg e só hoje, eu já caminhei ${pessoa.caminhouQuantosMetros} ${quantidadeMetrosCaminhada}"!´`
+}
 
 // Agora, apresente-se ;)
-?
+pessoa.aprentacao(); // 'Olá, eu sou o Jessé Silva, tenho 35 anos, 1.7 altura, meu peso é 117kg e só hoje, eu já caminhei 716 metros"!´'
 ```
