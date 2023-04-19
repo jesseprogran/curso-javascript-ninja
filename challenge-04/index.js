@@ -47,6 +47,49 @@ Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
 
 carro.obterCor = function() {
-  return mudarCor;
+  return carro.cor;
+}
+
+/*
+Crie um método chamado `obterModelo` que retorne o modelo do carro.
+*/
+carro.obterModelo = function() {
+  return carro.modelo;
 };
 
+/*
+Crie um método chamado `obterMarca` que retorne a marca do carro.
+*/
+
+carro.obterMarca = function(){
+  return carro.marca;
+};
+
+
+/*
+Crie um método chamado `obterMarcaModelo`, que retorne:
+"Esse carro é um [MARCA] [MODELO]"
+Para retornar os valores de marca e modelo, utilize os métodos criados.
+*/
+
+carro.obterMarcaModelo = function() {
+  return `Esse Carro é um ${carro.marca} ${carro.modelo}`;
+};
+
+
+/*
+Crie um método que irá adicionar pessoas no carro. Esse método terá as
+seguintes características:
+- Ele deverá receber por parâmetro o número de pessoas entrarão no carro. Esse
+número não precisa encher o carro, você poderá acrescentar as pessoas aos
+poucos.
+- O método deve retornar a frase: "Já temos [X] pessoas no carro!"
+- Se o carro já estiver cheio, com todos os assentos já preenchidos, o método
+deve retornar a frase: "O carro já está lotado!"
+- Se ainda houverem lugares no carro, mas a quantidade de pessoas passadas por
+parâmetro for ultrapassar o limite de assentos do carro, então você deve
+mostrar quantos assentos ainda podem ser ocupados, com a frase:
+"Só cabem mais [QUANTIDADE_DE_PESSOAS_QUE_CABEM] pessoas!"
+- Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
+citado acima, no lugar de "pessoas".
+*/
