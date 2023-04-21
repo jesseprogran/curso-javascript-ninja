@@ -9,15 +9,30 @@ para o contrário.
 */
 let isTruthy = function( A  ) {
   return  A ? true : false;
-}
+};
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
+isTruthy(false);
+isTruthy(null);
+isTruthy(undefined);
+isTruthy("");
+isTruthy(0);
 isTruthy(-0);
+isTruthy(NaN);
 
 /*
 Invoque a função criada acima passando como parâmetro 10 valores `truthy`.
 */
 isTruthy(10);
+isTruthy("Felipe");
+isTruthy(true);
+isTruthy({});
+isTruthy([]);
+isTruthy(function(){});
+isTruthy(10 + 10);
+isTruthy("1");
+isTruthy("Seja bem vindo");
+isTruthy([3, 3, 5]);
 
 /*
 Declare uma variável chamada `carro`, atribuindo à ela um objeto com as
@@ -34,7 +49,7 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 let carro = {
   marca: "FIAT",
   modelo: "Palio",
-  placa:"BJCF2C",
+  placa:"BJC-087",
   ano: 2015,
   cor:"Cinza",
   quantasPortas: 4,
@@ -46,8 +61,8 @@ let carro = {
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
-carro.mudarCor = function() {
-  mudarCor++
+carro.mudarCor = function(cor) {
+  carro.cor = cor;
 };
 
 /*
@@ -55,7 +70,7 @@ Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
 carro.obterCor = function() {
   return carro.cor;
-}
+};
 
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
@@ -68,7 +83,7 @@ carro.obterModelo = function() {
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
 
-carro.obterMarca = function(){
+carro.obterMarca = function() {
   return carro.marca;
 };
 
@@ -79,7 +94,7 @@ Crie um método chamado `obterMarcaModelo`, que retorne:
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
 carro.obterMarcaModelo = function() {
-  return `Esse Carro é um ${carro.marca} ${carro.modelo}`;
+  return `Esse Carro é um ${carro.obterMarca()} ${carro.obterModelo()}`;
 };
 
 
@@ -109,22 +124,30 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-?
+
+carro.obterCor(); // cinza
 
 // Mude a cor do carro para vermelho.
-?
+
+carro.mudarCor("vermelho");
 
 // E agora, qual a cor do carro?
-?
+
+carro.obterCor(); // vermelho
+
 
 // Mude a cor do carro para verde musgo.
-?
+
+carro.mudarCor("Verde Musgo");
+
 
 // E agora, qual a cor do carro?
-?
+
+carro.obterCor(); // Verde Musgo
 
 // Qual a marca e modelo do carro?
-?
+
+carro.obterMarcaModelo(); //"Esse carro é um FIAT Palio"
 
 // Adicione 2 pessoas no carro.
 ?
