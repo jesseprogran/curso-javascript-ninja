@@ -100,6 +100,12 @@ carro.adcionarPessoaCarro = function(numeroPessoas) {
   if (carro.quantidadePessoas === carro.assentos) {
     return `O carro já está lotado!`
   }
+
+  if (totalPessoas > carro.assentos) {
+    let quantasPessoasCabem = carro.assentos - carro.quantidadePessoas
+    let pluralOuSingular = quantasPessoasCabem === 1 ? 'pessoa' : 'pessoas'
+    return `Só cabem mais ${quantasPessoasCabem} ${pluralOuSingular}!`
+  }
   carro.quantidadePessoas += numeroPessoas;
-  return `Já temos ${totalPessoas} no carro`
+  return `Já temos ${carro.quantidadePessoas} pessoas  no carro`
 };
