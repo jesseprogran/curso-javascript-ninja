@@ -5,7 +5,7 @@ desses parâmetros.
 */
 let sum = function calculateSum(x, y){
   return x + y;
-}
+};
 
 /*
 Invoque a função criada acima, passando dois números que serão somados, e mostre
@@ -87,7 +87,7 @@ function calculator(operador){
         return 'Operação Inválida.';
     }
     return `Resultado da operação: ${num1} ${operador} ${num2} = ${resultado}.`
-  }
+  };
 }
 
 /*
