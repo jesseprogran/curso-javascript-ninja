@@ -13,7 +13,7 @@
   var five = Number("5");
   console.log(five + " é número?", typeof five === "number");
 
-  var concat = String("10 + 10");
+  var concat = String("10' + 10");
   console.log(
     '"' + concat + '" é uma string? E é igual a "1010"?',
     typeof concat === "string"
@@ -161,11 +161,57 @@
     divisão e resto. Crie variáveis com os nomes "subtraction",
     "multiplication", "division" e "mod".
     */
-  // ?
+
+    let operationSignalMenos = '-';
+    let subtraction = calculator(operationSignalMenos);
+
+    if(subtraction) {
+      number1 = 10;
+      number2 = 5;
+      console.log(showOperationMessage(number1, operationSignalMenos, number2), subtraction(number1, number2));
+    } else {
+      console.log(showErrorMessage(operationSignalMenos));
+    }
+
+    let operationSignalmultiplicacao = '*';
+    let multiplication = calculator(operationSignalmultiplicacao);
+
+    if(multiplication) {
+      number1 = 3;
+      number2 = 3;
+
+      console.log(showOperationMessage(number1, operationSignalmultiplicacao, number2), multiplication(number1, number2));
+    } else {
+      console.log(showErrorMessage(operationSignalmultiplicacao));
+    }
+
+    let operationSignaldiv = '/';
+    let division = calculator(operationSignaldiv);
+
+    if(division) {
+      number1 = 30;
+      number2 = 67;
+
+      console.log(showOperationMessage(number1, operationSignaldiv, number2), division(number1, number2));
+    } else {
+      console.log(showErrorMessage(operationSignaldiv));
+    }
 
   /*
     Repita o PASSO 2 novamente, mas passando um operador inválido, para ver se
     a mensagem de erro será mostrada no console.
     */
-  // ?
+
+  let operationSignalMod = '%';
+  let mod = calculator(operationSignalMod);
+
+  if(mod) {
+    number1 = 23;
+    number2 = 34;
+
+    console.log(showErrorMessage(number1, operationSignalMod, number2), mod(number1, number2))
+  } else {
+    console.log(showErrorMessage(operationSignalMod));
+  }
+ let name = jesse
 })();
