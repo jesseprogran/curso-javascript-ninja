@@ -213,5 +213,4 @@
   } else {
     console.log(showErrorMessage(operationSignalMod));
   }
- let name = jesse
-})();
+ })();
