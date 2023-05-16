@@ -25,6 +25,10 @@
     birthday:'07/02/1991'
   }
 
+  let exemplo = {
+    aula:"matias"
+  }
+
   /*
   Use um loop para percorrer o objeto criado acima, mostrando no console
   a frase:
