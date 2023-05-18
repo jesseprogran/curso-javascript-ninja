@@ -56,18 +56,11 @@
   'The person has more than 25 years old? [TRUE/FALSE]'
   */
  function moreThan(age) {
-  for(let prop in person) {
-    if(prop === 'age') {
-      return person[prop] > age;
-    }
-  }
-  return false;
+  return peerson.age > age;
+
  }
 
- let ageToCheck = 15;
- let isOlder = moreThan(ageToCheck);
-
- console.log(`The person has more than ${ageToCheck} years old? ${isOlder}`);
+ console.log(`The person has more than 25 years old? ${moreThan(25)}`);
 
   /*
   Faça um loop de 0 a 20, que adicione cada número como um item de um
@@ -96,7 +89,7 @@
 
   numbers = [];
 
-  for(let i = 0; i<= 20; i++) {
+  for(let i = 0; i <= 20; i++) {
     if(i % 2 !== 0) {
       continue;
     }
