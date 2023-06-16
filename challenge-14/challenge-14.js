@@ -62,11 +62,15 @@
   */
   console.log("\nOperation 2:");
 
-  let operatio = justMod2Or3.reduceRight(function (accumulator, currentValue) {
+  let operation2 = justMod2Or3.reduceRight(function (
+    accumulator,
+    currentValue
+  ) {
     return (accumulator + 1) * currentValue;
-  }, 0);
+  },
+  0);
 
-  console.log(operatio)
+  console.log(operation2);
 
   /*
   Crie um array chamado `name`. Cada elemento desse array deve ser uma sílaba
@@ -78,12 +82,12 @@
   */
   console.log('\nSeu nome na língua do "P":');
 
-  let name = ['J', 'e', 's', 's', 'é'];
+  let name = ["Je", "ss", "é"];
 
-  let result = name.reduce(function(acumalado, atual) {
-    return acumalado + 'P' + atual;
-  })
-  console.log(result)
+  let result = name.reduce(function (acumalado, atual) {
+    return acumalado + "P" + atual;
+  }, "");
+  console.log(result);
 
   /*
   Crie uma variável chamada `inversedName`, que reduzirá o array em uma string
@@ -91,10 +95,10 @@
   */
   console.log("\nInversed Name:");
 
-  let resulta = name.reduceRight(function(acumalado, atual) {
-    return acumalado + 'P' + atual;
-  })
-  console.log(resulta)
+  let inversedName = name.reduceRight(function (acumalado, atual) {
+    return acumalado + "P" + atual;
+  });
+  console.log(inversedName);
   /*
   Mostre no console o array `numberObjects`.
   */
@@ -111,8 +115,12 @@
   o que acontece ;)
   */
   console.log("\nExiste um { number: 2 } em numberObjects?");
-
-  
+  if(numberObjects.indexOf({number: 2}) > -1) {
+    console.log("Existe um objeto { number: 2 } em numberObjects!");
+  }
+  else {
+    console.log("Não existe um objeto { number: 2 } em numberObjects :(");
+  }
 
   /*
   Fazendo o mesmo do exercício acima, mas começando a buscar do último índice,
@@ -121,7 +129,12 @@
   console.log(
     "\nE buscando a partir do último índice, o { number: 2 } existe?"
   );
-  // ?
+  if(numberObjects.lastIndexOf({number: 2}, 2) > -1) {
+    console.log("Existe um objeto { number: 2 } em numberObjects!");
+  }
+  else {
+    console.log("Não existe um objeto { number: 2 } em numberObjects :(");
+  }
 
   /*
   Verifique se `justMod2Or3` é um array. Se for, mostre-o no console, no
@@ -130,12 +143,8 @@
   console.log(
     "\njustMod2Or3 é um array? Se for, a representação dele em String é:"
   );
-  // ?
+  if( Array.isArray(justMod2Or3 )) {
+    console.log( justMod2Or3.toString() );
+  }
 })();
 
-let arr = ["J", "e", "s", "s", "é"];
-let reduce = arr.reduceRight((acumalado, atual, index, array) => {
-  return acumalado + atual;
-});
-
-console.log(reduce);
